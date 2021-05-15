@@ -9,15 +9,22 @@ This chart was moved to https://github.com/grafana/helm2-grafana
 ## TL;DR;
 
 ```console
-$ helm install stable/grafana
-```
 
+Need to search grafana in hub using Helm
+
+helm search hub grafana
+
+helm repo add grafana https://grafana.github.io/helm-charts
+
+helm repo update
+
+helm install my-release grafana/grafana
+
+And for particular namespace: helm install my-release grafana/grafana -n test-namespace
 ## Installing the Chart
 
 To install the chart with the release name `my-release`:
 
-```console
-$ helm install --name my-release stable/grafana
 ```
 
 ## Uninstalling the Chart
